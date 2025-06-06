@@ -1,7 +1,10 @@
 <?php
 require 'header.php';
 // require 'oeuvres.php';
-require 'connexion.php';
+require 'bdd.php';
+
+// Connexion à la base de données
+$mysqlClient = connexion();
 
 // On récupère les oeuvres depuis la base de données
 $sqlQuery = 'SELECT * FROM oeuvres order by id ASC';
